@@ -8,37 +8,38 @@ Sistema web moderno para el registro de avances programáticos de los docentes d
 
 ```
 avances-programaticos/
-├── frontend/                   # Vue 3 + Vite (SPA)
+├── frontend/                           # Aplicación web desarrollada con Vue 3 y Vite (SPA)
 │   └── src/
-│       ├── components/
-│       │   ├── LoginView.vue       # Pantalla de login
-│       │   ├── AppHeader.vue       # Header con logout
-│       │   ├── AppFooter.vue
-│       │   ├── AvanceForm.vue      # Wizard 6 pasos
-│       │   └── FileUpload.vue      # Drag & drop
+│       ├── components/                 # Componentes reutilizables de la interfaz
+│       │   ├── LoginView.vue           # Pantalla de inicio de sesión de los usuarios
+│       │   ├── AppHeader.vue           # Encabezado de la aplicación con información del usuario y botón para cerrar sesión
+│       │   ├── AppFooter.vue           # Pie de página de la aplicación
+│       │   ├── AvanceForm.vue          # Formulario tipo asistente (wizard) dividido en 6 pasos para registrar avances
+│       │   └── FileUpload.vue          # Componente para subir archivos mediante arrastrar y soltar (Drag & Drop)
 │       ├── stores/
-│       │   └── auth.js             # Estado de autenticación (JWT)
+│       │   └── auth.js                 # Manejo del estado de autenticación utilizando JWT
 │       ├── services/
-│       │   └── api.js              # Axios + interceptores de auth
-│       └── assets/styles.css
+│       │   └── api.js                  # Configuración de Axios para consumir la API y enviar automáticamente el token de autenticación
+│       └── assets/
+│           └── styles.css              # Hoja de estilos global de la aplicación
 │
-└── backend/                    # Node.js + Express (API REST)
-    ├── controllers/
-    │   ├── authController.js       # Login / perfil
-    │   └── avancesController.js    # CRUD avances
-    ├── middleware/
-    │   ├── auth.js                 # Verificación JWT
-    │   └── validarAvance.js        # express-validator
-    ├── routes/
-    │   ├── auth.js                 # /api/auth/*
-    │   └── avances.js              # /api/avances/*
-    ├── db/
-    │   ├── pool.js                 # Conexión a PostgreSQL (pg)
-    │   ├── migrate.js              # Creación de tablas
-    │   └── seed.js                 # Usuarios iniciales
-    ├── uploads/                    # Archivos adjuntos
-    ├── index.js
-    └── .env.example
+└── backend/                            # Servidor desarrollado con Node.js y Express que expone la API REST
+    ├── controllers/                    # Contienen la lógica de negocio de cada módulo
+    │   ├── authController.js           # Procesos de autenticación: inicio de sesión y consulta del perfil
+    │   └── avancesController.js        # Operaciones CRUD (Crear, Consultar, Actualizar y Eliminar) de los avances
+    ├── middleware/                     # Funciones intermedias que se ejecutan antes de llegar a los controladores
+    │   ├── auth.js                     # Verifica que el usuario tenga un token JWT válido
+    │   └── validarAvance.js            # Valida que los datos enviados cumplan con los requisitos utilizando express-validator
+    ├── routes/                         # Definición de las rutas o endpoints de la API
+    │   ├── auth.js                     # Rutas relacionadas con la autenticación (/api/auth/*)
+    │   └── avances.js                  # Rutas para administrar los avances (/api/avances/*)
+    ├── db/                             # Archivos relacionados con la base de datos PostgreSQL
+    │   ├── pool.js                     # Configuración de la conexión a PostgreSQL mediante la librería pg
+    │   ├── migrate.js                  # Script para crear la estructura de la base de datos (tablas)
+    │   └── seed.js                     # Script para insertar datos iniciales, como usuarios administradores
+    ├── uploads/                        # Carpeta donde se almacenan los archivos adjuntos cargados por los usuarios
+    ├── index.js                        # Punto de entrada del servidor Express
+    └── .env.example                    # Archivo de ejemplo con las variables de entorno necesarias
 ```
 
 ---
