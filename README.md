@@ -69,8 +69,8 @@ avances-programaticos/
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/tu-usuario/avances-programaticos.git
-cd avances-programaticos
+git clone https://github.com/ReyDavid-svg/avance_programatico.git
+cd avance_programatico
 ```
 
 ### 2. Configurar variables de entorno
@@ -155,7 +155,7 @@ Content-Type: application/json
 
 Video:
 
-> El video muestra el flujo completo: login → wizard de 6 pasos → envío → confirmación con folio, y explica la arquitectura frontend/backend.
+El video muestra el flujo completo: login → wizard de 6 pasos → envío → confirmación con folio, y explica la arquitectura frontend/backend.
 
 ---
 
