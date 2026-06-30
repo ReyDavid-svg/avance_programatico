@@ -156,7 +156,7 @@ Content-Type: application/json
 
 Video:
 
-El video muestra el flujo completo: login → wizard de 6 pasos → envío → confirmación con folio, y explica la arquitectura frontend/backend.
+El video muestra el flujo: desde el login, como rellenar el formulario y explica la arquitectura frontend/backend.
 
 ---
 
