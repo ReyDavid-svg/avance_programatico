@@ -65,13 +65,13 @@
 
           <button type="submit" class="lbtn" :disabled="cargando">
             <span v-if="cargando" class="lbtn-spin"></span>
-            <span v-else>Entrar →</span>
+            <span v-else>Entrar</span>
           </button>
         </form>
 
         <p class="login-footer-note">
-          ¿Problemas para acceder? Contacta al departamento de sistemas.
-        </p>
+          Si tienes problemas para acceder, contanta al encargado de sistemas.
+          </p>
       </div>
     </div>
   </div>
